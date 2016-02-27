@@ -1,5 +1,5 @@
 /**
- * @ AUTHOR NAME HERE
+ * @ USS Vinson - Vinson Luo, Justin Lam, Winnie Lin, Madeline Rush
  * @ Starter Code By Guocheng
  *
  * 2016-01-30
@@ -13,7 +13,7 @@ import java.net.InetAddress;
 import java.lang.Thread;
 
 public class Battleship {
-	public static String API_KEY = "API_KEY_HERE"; ///////// PUT YOUR API KEY HERE /////////
+	public static String API_KEY = "275105712"; ///////// PUT YOUR API KEY HERE /////////
 	public static String GAME_SERVER = "battleshipgs.purduehackers.com";
 
 	//////////////////////////////////////  PUT YOUR CODE HERE //////////////////////////////////////
