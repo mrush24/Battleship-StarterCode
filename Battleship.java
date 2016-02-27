@@ -51,7 +51,10 @@ public class Battleship {
 						this.grid[i][j] = 0;			
 					}
 					return;
-				}
+				} else {
+                    int i = rows[rand.nextInt(7)];
+                    int j = rows[rand.nextInt(7)];
+                }
 			//}
 		//}
 	}
