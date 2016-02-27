@@ -11,6 +11,7 @@ import java.io.*;
 import java.net.Socket;
 import java.net.InetAddress;
 import java.lang.Thread;
+import java.util.Random;
 
 public class Battleship {
 	public static String API_KEY = "275105712"; ///////// PUT YOUR API KEY HERE /////////
@@ -34,10 +35,10 @@ public class Battleship {
 	}
 
 	void makeMove() {
-		int[] rows = {0,1,2,3,4,5,6,7};
-        char[] columns = {A, B, C, D, E, F, G, H};
-        i = nextInt(rows);
-        j = nextChar(columns);
+        Random rand = new Random();
+		int[] rows = new int[] {0,1,2,3,4,5,6,7};
+        int i = rows[rand.nextInt(7)];
+        int j = rows[rand.nextInt(7)];
 		//for(int i = 0; i < 8; i++) {
 			//for(int j = 0; j < 8; j++) {
 				if (this.grid[i][j] == -1) {
@@ -64,7 +65,7 @@ public class Battleship {
 	String data;
 	BufferedReader br;
 	PrintWriter out;
-	Boolean moveMade = False;
+	Boolean moveMade = false;
 
 	public Battleship() {
 		this.grid = new int[8][8];
@@ -149,7 +150,7 @@ public class Battleship {
 				this.out.print(carrier[1]);
 				out.flush();
 			} else if (data.contains( "Enter")) {
-				this.moveMade = False;
+				this.moveMade = false;
 				this.makeMove();
 			} else if (data.contains("Error" )) {
 				System.out.println("Error: " + data);
@@ -189,7 +190,7 @@ public class Battleship {
 			System.out.println("Error: Please Make Only 1 Move Per Turn.");
 			System.exit(1); // Close Client
 		}
-		this.moveMade = True;
+		this.moveMade = true;
 
 		this.out.print(pos);
 		out.flush();
